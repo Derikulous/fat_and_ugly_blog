@@ -1,6 +1,7 @@
 namespace :load_blog do
   desc "loads a lot of shit into the blog"
   task :load_shit => :environment do
+    require 'faker'
     100.times do
       p = Post.create(
         title: Faker::Company.catch_phrase,
