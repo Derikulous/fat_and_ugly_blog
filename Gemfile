@@ -24,6 +24,7 @@ end
 
 gem 'jquery-rails'
 gem 'faker'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec-rails'
