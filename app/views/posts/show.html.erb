@@ -1,19 +1,16 @@
 <p id="notice"><%= notice %></p>
 <% @posts.each do |post| %>
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+  <p>
+    <b>Title:</b>
+    <%= @post.title %>
+  </p>
 
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
+  <p>
+    <b>Body:</b>
+    <%= @post.body %>
+  </p>
+<% end %>
 
-<div class="comments">
-  <button class="btn comments-show-button"  type="button">Show comments</button>
-  <button id="remove-button" class="btn" type="button">Remove comments</button>
-</div>
-
+  <%= link_to 'Show Comments', show_comment_path(@post.comments) %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
   <%= link_to 'Back', posts_path %>
