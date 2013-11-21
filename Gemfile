@@ -25,6 +25,8 @@ end
 gem 'jquery-rails'
 gem 'faker'
 gem 'newrelic_rpm'
+gem 'will_paginate'
+
 
 group :development, :test do
   gem 'rspec-rails'
@@ -33,6 +35,7 @@ group :development, :test do
   gem 'pry-debugger'
   gem 'hirb'
   gem 'sqlite3'
+  gem 'rack-mini-profiler'
 end
 
 group :test do

@@ -2,7 +2,7 @@ class RepliesController < ApplicationController
   # GET /replies
   # GET /replies.json
   def index
-    @replies = Reply.order("comments.body").joins(:comment).select("replies.*, comments.body as comment_body")
+    @replies = Reply.all
 
     respond_to do |format|
       format.html # index.html.erb
