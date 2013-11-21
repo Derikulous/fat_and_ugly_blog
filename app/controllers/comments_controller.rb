@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.includes(:replies)
+    @comments = Comment.page(params[:page]).per_page(100).includes(:replies)
 
     respond_to do |format|
       format.html # index.html.erb
