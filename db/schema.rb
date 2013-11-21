@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131121053536) do
+ActiveRecord::Schema.define(:version => 20130615172522) do
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -23,9 +23,8 @@ ActiveRecord::Schema.define(:version => 20131121053536) do
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.integer  "comments_count"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "replies", :force => true do |t|
