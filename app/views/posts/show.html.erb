@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% @posts.each do |post| %>
 <p>
   <b>Title:</b>
   <%= @post.title %>
@@ -10,6 +10,10 @@
   <%= @post.body %>
 </p>
 
+<div class="comments">
+  <button class="btn comments-show-button"  type="button">Show comments</button>
+  <button id="remove-button" class="btn" type="button">Remove comments</button>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
